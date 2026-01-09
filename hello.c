@@ -5,4 +5,5 @@ int main()
     printf("age is:");
     scanf("%d",&i);
     return 0;
+    
 }
