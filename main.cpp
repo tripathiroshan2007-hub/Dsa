@@ -2,19 +2,17 @@
 using namespace std;
 int main(){
    int n=20;
-   int sum=0;
+   int oddSum=0;
 
-   int i=1;
-   while(i<=n){
-    sum+=i;
-    if(i==10){
-        break;
-    }
+  for(int i=1;i<=n; i++){
+     if (i%2!=0){
+        oddSum+=i;
+     }
+     }
+     cout<<"oddSum="<<oddSum;
+  
 
-    i++; 
-   }
-
-     cout<<"sum="<<sum<<"\t";
+     
     cout<<endl;
     return 0;
 }
