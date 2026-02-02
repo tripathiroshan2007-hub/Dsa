@@ -11,6 +11,7 @@ bool isPrime=true;
          break;
      }
  }
+ 
    if (isPrime==true){
        cout<<"prime no\n";
    } else {
