@@ -9,22 +9,17 @@ int factN(int n){
     }
     return fact;
 }
-int factR(int r){
-  int fact=1;
-    for(int i=1;i<=r;i++){
-        fact*=i;
-    }
-    return fact;
+int nCr(int n,int r){
+    int fact_n=factN(n);
+    int fact_r=factN(r);
+    int fact_nmr=factN(n-r);
+    
+    return fact_n/(fact_r * fact_nmr);
 }
-int factNMR(int nMinusR){
-  int fact=1;
-    for(int i=1;i<=nMinusR;i++){
-        fact*=i;
-    }
-    return fact;
-}
+
 int main(){
-    int finalResult = factN(4)/(factR(2)*factNMR(4-2));
-    cout<<"finalResult="<<finalResult<<endl;
+    int n=5,r=2;
+    cout<<"nCr of :"<<n<<" "<<"and"<<" "<<r<<" "<<"is:"<<nCr(n,r)<<endl;
+    
     return 0;
 }
