@@ -2,13 +2,20 @@
 #include<string>
 using namespace std;
 
-int factN(int n){
-  int fact=1;
-    for(int i=1;i<=n;i++){
-        fact*=i;
+int sumofDigits(int num){
+    int digSum=0;
+    while(num>0){
+        int lastDigit=num%10;
+        num/=10;
+        digSum+=lastDigit;
     }
-    return fact;
+    return digSum;
 }
+
+
 int main(){
-    cout<<factN(5)<<endl;
+    cout<<"sum="<<sumofDigits(1234)<<endl;
+   
+    return 0;
 }
+    
