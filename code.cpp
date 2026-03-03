@@ -2,24 +2,24 @@
 #include<string>
 using namespace std;
 
-int factN(int n){
-  int fact=1;
-    for(int i=1;i<=n;i++){
-        fact*=i;
+int decToBinary(int decNum){
+    int ans=0,pow=1;
+
+    while(decNum>0){
+        int rem = decNum%2;
+        decNum/=2;
+
+        ans+=(rem*pow);
+        pow*=10;
+
     }
-    return fact;
-}
-int nCr(int n,int r){
-    int fact_n=factN(n);
-    int fact_r=factN(r);
-    int fact_nmr=factN(n-r);
-    
-    return fact_n/(fact_r * fact_nmr);
+    return ans;
 }
 
 int main(){
-    int n=5,r=2;
-    cout<<"nCr of :"<<n<<" "<<"and"<<" "<<r<<" "<<"is:"<<nCr(n,r)<<endl;
+    int decNum=112;
+
+    cout<<decToBinary(decNum)<<endl;
     
     return 0;
 }
