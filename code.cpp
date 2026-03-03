@@ -19,7 +19,8 @@ int decToBinary(int decNum){
 int main(){
     int decNum=112;
 
-    cout<<decToBinary(decNum)<<endl;
-    
+    for(int i=1;i<=10;i++){
+        cout<<decToBinary(i)<<endl;
+    }
     return 0;
 }
